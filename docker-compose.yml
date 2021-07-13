@@ -1,0 +1,11 @@
+version: "3"
+services:
+  redis:
+    image: redis
+  srv:
+    #image: ubuntu
+    build: .
+    tty: true
+    depends_on:
+      - redis
+    command: sleep infinity
